@@ -293,9 +293,6 @@ class Flasher(QDialog):
                     bytes_sent = self.serial.write(bytes(dlg.commands, 'utf8'))
                 except Exception as e:
                     QMessageBox.critical(self, "COM Port error", e)
-                else:
-                    QMessageBox.information(self, "Done", "Use admin/ClassicMQTT to enter configuration page")
-                    self.serial.close()
             else:
                 QMessageBox.information(self, "Done", "Nothing to send")
 
@@ -304,22 +301,26 @@ class Flasher(QDialog):
 
     def process_bytes(self, bs):
         text = bs.decode('ascii')
-        print("!Received: " + text)
+        # print("!Received: " + text)
         try:
             for b in text:
                 if b == '{':  # start json
                     self.jsonStart = True
-                    print("start JSON")
+                    # print("start JSON")
                 if self.jsonStart == True:
                     self.jsonBuffer += b
                 if b == '}':  # end json
                     self.jsonStart = False
-                    print("found JSON")
+                    # print("found JSON")
                     print(self.jsonBuffer)
                     obj = json.loads(self.jsonBuffer)
                     url = "http://" + obj["IP"]
-                    print("url:" + url)
+                    print("Device IP: {0} ".format(url))
+                    txt = "******* Use admin/{0} to enter configuration page *******".format(obj["ApPassword"])
+                    print(txt)
                     webbrowser.get().open(url)
+                    self.serial.close()
+                    
         except Exception as e:
             print("JSON error", e)
 
