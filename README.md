@@ -13,6 +13,7 @@ The program will send a JSON message to the device with the SSID and WIFI Passwo
 When the ESP32 device is in AP mode, the code should be implemented to receive the wifi info JSON message.
 
 example JSON message from flasher;
+
 {"ssid":"MyRouterSSID", "password":"myWifiPassword"}
 
 Once received, the device should connect to wifi using these credentials and return the following JSON message back to the flasher.
