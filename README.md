@@ -1,9 +1,11 @@
 # EspFlashTool
 Simple flash and wifi config tool for the ESP32 
 
+|If you find this project useful or interesting, please help support further development!|[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif)](https://www.paypal.com/donate/?token=ujPa7RERQZhNZKCdWB_BCvQi7Wv43j7ZffsEqVqdVUcGQcbNZ0Ov1Dy-ZhgALX8rstQBZW&country.x=US&locale.x=)|
+|---|---|
+
 [![GitHub All Releases](https://img.shields.io/github/downloads/ClassicDIY/EspFlashTool/total?style=for-the-badge)](https://github.com/ClassicDIY/EspFlashTool/releases)
 [![GitHub](https://img.shields.io/github/license/ClassicDIY/EspFlashTool?style=for-the-badge)](https://github.com/ClassicDIY/EspFlashTool/blob/master/LICENSE)
-[![https://www.buymeacoffee.com/r4K2HIB](https://img.shields.io/badge/Donate-Buy%20Me%20a%20coffee-orange?style=for-the-badge)](https://www.buymeacoffee.com/r4K2HIB)
 
 Uses the ESPtool from Espressif under the hood, and all required settings by default.
 
