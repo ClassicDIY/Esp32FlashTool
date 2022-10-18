@@ -48,7 +48,7 @@ class ESPWorker(QObject):
             command += command_erase
         else:
             command += command_write
-        print("Using command: ", command)
+        # print("Using command: ", command)
         try:
             esptool.main(command)
             self.finished.emit()
