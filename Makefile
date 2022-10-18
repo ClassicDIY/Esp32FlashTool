@@ -7,6 +7,7 @@ clean:
 	@echo "cleaning..."
 	rmdir /Q /S __pycache__
 	rmdir /Q /S build
+	rmdir /Q /S dist
 
 
 
