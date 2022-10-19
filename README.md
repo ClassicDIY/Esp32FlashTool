@@ -14,11 +14,20 @@ Uses the ESPtool from Espressif under the hood with all required settings by def
     <img src=https://github.com/ClassicDIY/Esp32FlashTool/blob/master/Pictures/Flasher1.PNG>    
 </p>
 
+Flash!
+
+esptool.py --port <COM#>  --baud "115200 --before default_reset --after hard_reset write_flash --flash_mode qio --flash_size detect 0x1000 bootloader.bin 0x8000 partitions.bin 0x10000 firmware.bin
+
+Erase!
+
+esptool.py --port <COM#>  --baud "115200 --before default_reset --after hard_reset erase_flash
+
+Setup Wifi;
 
 Sends WIFI configuration to flashed device via serial.
 
 The program will send a JSON message to the device with the SSID and WIFI Password entered by the user when they enter and save Setup WIFI.
-When the ESP32 device is in AP mode, the code should be implemented to receive the wifi info JSON message.
+When the ESP32 device is in AP mode, your ESP device must implemented the code to receive the wifi info JSON message and configure Wifi.
 
 example JSON message from flasher;
 
