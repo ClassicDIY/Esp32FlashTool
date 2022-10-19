@@ -8,7 +8,12 @@ Simple flash and wifi config tool for the ESP32
 [![GitHub All Releases](https://img.shields.io/github/downloads/ClassicDIY/EspFlashTool/total?style=for-the-badge)](https://github.com/ClassicDIY/EspFlashTool/releases)
 [![GitHub](https://img.shields.io/github/license/ClassicDIY/EspFlashTool?style=for-the-badge)](https://github.com/ClassicDIY/EspFlashTool/blob/master/LICENSE)
 
-Uses the ESPtool from Espressif under the hood, and all required settings by default.
+Uses the ESPtool from Espressif under the hood with all required settings by default. It will look for the firmware.bin, partitions.bin and bootloader.bin files in the current directory, by creating a zip file that includes your bin files and the flasher executable for your Github Releases will give the user a convenient way to flash and setup the ESP with their Wifi credentials.
+
+<p align="center">
+    <img src=https://github.com/ClassicDIY/Esp32FlashTool/blob/master/Pictures/Flasher1.PNG>    
+</p>
+
 
 Sends WIFI configuration to flashed device via serial.
 
